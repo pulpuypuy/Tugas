@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class chochoKost{
     public static void main (String[]args){
@@ -15,8 +17,8 @@ public class chochoKost{
         System.out.println("Selamat Datang di Chocho Kost");
         System.out.println("=============================");
         System.out.println("Kami Menyediakan 3 Tipe Kamar Kost : ");
-        System.out.println("\n1. Kamar Premium"+"\n2. Kamar Elite"+"\n3. Kamar Standard");
-        System.out.println("Silahkan Pilih 1-3 Untuk Melihat Fasilitas dan Harga : ");
+        System.out.println("\n1. Kamar Premium"+"\n2. Kamar Elite"+"\n3. Kamar Standar"+"\n4. Keluar");
+        System.out.println("Silahkan Pilih 1-4 : ");
         pilihan = s.nextInt();
         
         switch (pilihan){
@@ -96,10 +98,18 @@ public class chochoKost{
                 lamaSewa = s.nextInt();    
             }
             break;
+            
+            case 4 : 
+            System.out.println("Program berakhir");
+            System.exit(0);
+            break;
           
         }
         }while(pilihan<1 || pilihan>4 || !sewa);
         
+        LocalDate today = LocalDate.now();
+		LocalDate tglKeluar = today.plusMonths(lamaSewa);
+		
         total = harga * lamaSewa;
         sisa = total-sisa;
         dp = 0.5 * total;
@@ -112,6 +122,8 @@ public class chochoKost{
         System.out.println("Alamat              : "+alamat);
         System.out.println("Lama Sewa           : "+lamaSewa+"(bulan)");
         System.out.println("Jumlah Pembayaran   : "+total);
+        System.out.println("Tanggal Masuk       : "+today);
+        System.out.println("Tanggal Keluar      : "+tglKeluar);
         System.out.println("DP Pembayaran       : "+dp);
         System.out.println("Sisa Pembayaran     : "+sisa);
         
