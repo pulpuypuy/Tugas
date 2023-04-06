@@ -108,7 +108,7 @@ public class chochoKost{
         }while(pilihan<1 || pilihan>4 || !sewa);
         
         LocalDate tglMasuk = LocalDate.now();
-		LocalDate tglKeluar = tglMasuk.plusMonths(lamaSewa);
+        LocalDate tglKeluar = tglMasuk.plusMonths(lamaSewa);
 		
         total = harga * lamaSewa;
         dp = 0.5 * total;
