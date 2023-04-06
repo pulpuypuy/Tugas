@@ -1,22 +1,17 @@
 import java.util.Scanner;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.text.DecimalFormat;
 
 public class chochoKost{
     public static void main (String[]args){
-        int pilihan,harga=0,lamaSewa=0, total=0,sisa=0;
-        double dp=0;
+        int pilihan,harga=0,lamaSewa=0;
+        double dp=0,total=0,sisa=0;
         long noHp=0;
         String tipeKamar="",nama="",alamat="";
         boolean sewa = false;
         
         Scanner s = new Scanner(System.in);
-
-        DecimalFormat formatUang = new DecimalFormat("#,###.##");
-        String uangFormatted = formatUang.format(harga);
-        uangFormatted = "Rp "+uangFormatted;
-
+        
         do {
         System.out.println("=============================");
         System.out.println("Selamat Datang di Chocho Kost");
@@ -27,7 +22,7 @@ public class chochoKost{
         pilihan = s.nextInt();
         
         switch (pilihan){
-            case 1 : tipeKamar = "Kamar
+            case 1 : tipeKamar = "Kamar Premium";
             System.out.println("=============================");
             System.out.println("        "+tipeKamar+"        ");
             System.out.println("=============================");
@@ -35,7 +30,7 @@ public class chochoKost{
             System.out.println("\n1. Kasur"+"\n2. Lemari"+"\n3. Meja Belajar"+"\n4. AC"+"\n5. TV"+"\n6. WiFi"
             +"\n7. Kamar Mandi Modern"+"\n8. Laundry"+"\n9. Dapur Umum");
             harga = 1500000;
-            System.out.println("Harga : "+uangFormatted+"/Bulan");
+            System.out.println("Harga : Rp "+harga+"/Bulan");
             System.out.println("Apakah anda ingin menyewa Tipe ini? (y/n): ");
             sewa = s.next().equalsIgnoreCase("Y");
             if (sewa){
@@ -61,7 +56,7 @@ public class chochoKost{
             System.out.println("\n1. Kasur"+"\n2. Lemari"+"\n3. Meja Belajar"+"\n4. AC"+"\n5. WiFi"
             +"\n6. Kamar Mandi"+"\n7. Dapur Umum");
             harga = 1000000;
-            System.out.println("Harga : "+uangFormatted+"/Bulan");
+            System.out.println("Harga : Rp "+harga+"/Bulan");
             System.out.println("Apakah anda ingin menyewa Tipe ini? (y/n): ");
             sewa = s.next().equalsIgnoreCase("Y");
             if (sewa){
@@ -86,7 +81,7 @@ public class chochoKost{
             System.out.println("\nFasilitas : ");
             System.out.println("\n1. Kasur"+"\n2. Lemari"+"\n3. WiFi"+"\n4. Kamar Mandi"+"\n5. Dapur Umum");
             harga = 800000;
-            System.out.println("Harga : "+uangFormatted+"/Bulan");
+            System.out.println("Harga : Rp "+harga+"/Bulan");
             System.out.println("Apakah anda ingin menyewa Tipe ini? (y/n): ");
             sewa = s.next().equalsIgnoreCase("Y");
             if (sewa){
@@ -115,7 +110,7 @@ public class chochoKost{
         LocalDate tglMasuk = LocalDate.now();
 		LocalDate tglKeluar = tglMasuk.plusMonths(lamaSewa);
 		
-        total = uangFormatted * lamaSewa;
+        total = harga * lamaSewa;
         dp = 0.5 * total;
         sisa = total-dp;
         
@@ -123,14 +118,14 @@ public class chochoKost{
         System.out.println("        Bukti Penyewaan      ");
         System.out.println("=============================");
         System.out.println(tipeKamar);
+        System.out.println("Harga : Rp "+harga+"/Bulan");
         System.out.println("Nama                : "+nama);
         System.out.println("Alamat              : "+alamat);
         System.out.println("Lama Sewa           : "+lamaSewa+"(bulan)");
-        System.out.println("Jumlah Pembayaran   : "+total);
+        System.out.println("Jumlah Pembayaran   : "+"Rp "+total);
+        System.out.println("DP Pembayaran       : "+"Rp "+dp);
+        System.out.println("Sisa Pembayaran     : "+"Rp "+sisa);
         System.out.println("Tanggal Masuk       : "+tglMasuk);
         System.out.println("Tanggal Keluar      : "+tglKeluar);
-        System.out.println("DP Pembayaran       : "+dp);
-        System.out.println("Sisa Pembayaran     : "+sisa);
-        
     }
 }
