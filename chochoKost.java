@@ -22,10 +22,10 @@ public class chochoKost{
         pilihan = s.nextInt();
         
         switch (pilihan){
-            case 1 : tipeKamar = "Kamar Premium";
-            System.out.println("==================");
-            System.out.println(tipeKamar);
-            System.out.println("==================");
+            case 1 : tipeKamar = "Kamar
+            System.out.println("=============================");
+            System.out.println("        "+tipeKamar+"        ");
+            System.out.println("=============================");
             System.out.println("\nFasilitas : ");
             System.out.println("\n1. Kasur"+"\n2. Lemari"+"\n3. Meja Belajar"+"\n4. AC"+"\n5. TV"+"\n6. WiFi"
             +"\n7. Kamar Mandi Modern"+"\n8. Laundry"+"\n9. Dapur Umum");
@@ -34,9 +34,9 @@ public class chochoKost{
             System.out.println("Apakah anda ingin menyewa Tipe ini? (y/n): ");
             sewa = s.next().equalsIgnoreCase("Y");
             if (sewa){
-                System.out.println("==================");
-                System.out.println("Formulir Penyewaan");
-                System.out.println("==================");
+                System.out.println("=============================");
+                System.out.println("      Formulir Penyewaan     ");
+                System.out.println("=============================");
                 System.out.println("Masukan Nama Anda : ");
                 nama = s.next();
                 System.out.println("Masukan Alamat Anda : ");
@@ -49,9 +49,9 @@ public class chochoKost{
             break;
             
             case 2 : tipeKamar = "Kamar Elite";
-            System.out.println("==================");
-            System.out.println(tipeKamar);
-            System.out.println("==================");
+            System.out.println("=============================");
+            System.out.println("        "+tipeKamar+"        ");
+            System.out.println("=============================");
             System.out.println("\nFasilitas : ");
             System.out.println("\n1. Kasur"+"\n2. Lemari"+"\n3. Meja Belajar"+"\n4. AC"+"\n5. WiFi"
             +"\n6. Kamar Mandi"+"\n7. Dapur Umum");
@@ -60,9 +60,9 @@ public class chochoKost{
             System.out.println("Apakah anda ingin menyewa Tipe ini? (y/n): ");
             sewa = s.next().equalsIgnoreCase("Y");
             if (sewa){
-                System.out.println("==================");
-                System.out.println("Formulir Penyewaan");
-                System.out.println("==================");
+                System.out.println("=============================");
+                System.out.println("      Formulir Penyewaan     ");
+                System.out.println("=============================");
                 System.out.println("Masukan Nama Anda : ");
                 nama = s.next();
                 System.out.println("Masukan Alamat Anda : ");
@@ -75,9 +75,9 @@ public class chochoKost{
             break;
             
             case 3 : tipeKamar = "Kamar Standard";
-            System.out.println("==================");
-            System.out.println(tipeKamar);
-            System.out.println("==================");
+            System.out.println("=============================");
+            System.out.println("        "+tipeKamar+"        ");
+            System.out.println("=============================");
             System.out.println("\nFasilitas : ");
             System.out.println("\n1. Kasur"+"\n2. Lemari"+"\n3. WiFi"+"\n4. Kamar Mandi"+"\n5. Dapur Umum");
             harga = 800000;
@@ -85,9 +85,9 @@ public class chochoKost{
             System.out.println("Apakah anda ingin menyewa Tipe ini? (y/n): ");
             sewa = s.next().equalsIgnoreCase("Y");
             if (sewa){
-                System.out.println("==================");
-                System.out.println("Formulir Penyewaan");
-                System.out.println("==================");
+                System.out.println("=============================");
+                System.out.println("      Formulir Penyewaan     ");
+                System.out.println("=============================");
                 System.out.println("Masukan Nama Anda : ");
                 nama = s.next();
                 System.out.println("Masukan Alamat Anda : ");
@@ -114,9 +114,9 @@ public class chochoKost{
         sisa = total-sisa;
         dp = 0.5 * total;
         
-        System.out.println("\n==================");
-        System.out.println("Bukti Penyewaan");
-        System.out.println("==================");
+        System.out.println("=============================");
+        System.out.println("        Bukti Penyewaan      ");
+        System.out.println("=============================");
         System.out.println(tipeKamar);
         System.out.println("Nama                : "+nama);
         System.out.println("Alamat              : "+alamat);
