@@ -15,7 +15,7 @@ public class no3{
         
         if (jarak<=4){
             harga=9500;
-        }else if (jarak>5){
+        }else if (jarak>4){
             harga=9500+((jarak-4)*2500);
         }
         
