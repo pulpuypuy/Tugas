@@ -22,7 +22,8 @@ public class no5{
             komisi=0.25*pendapatan;
         }
     }else{
-        System.exit(0);
+        jasa=0;
+        komisi=0;
     }
     total=jasa+komisi+gaji;
     
