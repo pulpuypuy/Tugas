@@ -10,6 +10,9 @@ public class chochoJOption{
         String tipeKamar="",nama="",alamat="",sewa = "";
         boolean ulang = false;
         
+        LocalDate tglMasuk = LocalDate.now();
+        LocalDate tglKeluar = tglMasuk.plusMonths(lamaSewa);
+        
         do{
         pilihan=Integer.parseInt(JOptionPane.showInputDialog("=============================\nSelamat Datang di Chocho Kost\n=============================\nKami Menyediakan 3 Tipe Kamar Kost : \n1. Kamar Premium\n2. Kamar Elite\n3. Kamar Standar\n4. Keluar\nSilahkan Pilih 1-4 : "));
        
@@ -23,6 +26,24 @@ public class chochoJOption{
                 alamat = JOptionPane.showInputDialog("Masukan Alamat Anda : ");
                 noHp = Long.parseLong(JOptionPane.showInputDialog("Masukan No HP Anda : "));
                 lamaSewa = Integer.parseInt(JOptionPane.showInputDialog("Lama Sewa (Bulan) : "));
+                
+                total = harga * lamaSewa;
+                dp = 0.5 * total;
+                sisa = total-dp;
+        
+                System.out.println("=============================");
+                System.out.println("        Bukti Penyewaan      ");
+                System.out.println("=============================");
+                System.out.println(tipeKamar);
+                System.out.println("Harga : Rp "+harga+"/Bulan");
+                System.out.println("Nama                : "+nama);
+                System.out.println("Alamat              : "+alamat);
+                System.out.println("Lama Sewa           : "+lamaSewa+"(bulan)");
+                System.out.println("Jumlah Pembayaran   : "+"Rp "+total);
+                System.out.println("DP Pembayaran       : "+"Rp "+dp);
+                System.out.println("Sisa Pembayaran     : "+"Rp "+sisa);
+                System.out.println("Tanggal Masuk       : "+tglMasuk);
+                System.out.println("Tanggal Keluar      : "+tglKeluar);
             }
             else{
                 ulang=true;
@@ -38,6 +59,20 @@ public class chochoJOption{
                 alamat = JOptionPane.showInputDialog("Masukan Alamat Anda : ");
                 noHp = Long.parseLong(JOptionPane.showInputDialog("Masukan No HP Anda : "));
                 lamaSewa = Integer.parseInt(JOptionPane.showInputDialog("Lama Sewa (Bulan) : "));
+                
+                System.out.println("=============================");
+                System.out.println("        Bukti Penyewaan      ");
+                System.out.println("=============================");
+                System.out.println(tipeKamar);
+                System.out.println("Harga : Rp "+harga+"/Bulan");
+                System.out.println("Nama                : "+nama);
+                System.out.println("Alamat              : "+alamat);
+                System.out.println("Lama Sewa           : "+lamaSewa+"(bulan)");
+                System.out.println("Jumlah Pembayaran   : "+"Rp "+total);
+                System.out.println("DP Pembayaran       : "+"Rp "+dp);
+                System.out.println("Sisa Pembayaran     : "+"Rp "+sisa);
+                System.out.println("Tanggal Masuk       : "+tglMasuk);
+                System.out.println("Tanggal Keluar      : "+tglKeluar);
             }
             else{
                 ulang=true;
@@ -52,6 +87,20 @@ public class chochoJOption{
                 alamat = JOptionPane.showInputDialog("Masukan Alamat Anda : ");
                 noHp = Long.parseLong(JOptionPane.showInputDialog("Masukan No HP Anda : "));
                 lamaSewa = Integer.parseInt(JOptionPane.showInputDialog("Lama Sewa (Bulan) : "));
+                
+                System.out.println("=============================");
+                System.out.println("        Bukti Penyewaan      ");
+                System.out.println("=============================");
+                System.out.println(tipeKamar);
+                System.out.println("Harga : Rp "+harga+"/Bulan");
+                System.out.println("Nama                : "+nama);
+                System.out.println("Alamat              : "+alamat);
+                System.out.println("Lama Sewa           : "+lamaSewa+"(bulan)");
+                System.out.println("Jumlah Pembayaran   : "+"Rp "+total);
+                System.out.println("DP Pembayaran       : "+"Rp "+dp);
+                System.out.println("Sisa Pembayaran     : "+"Rp "+sisa);
+                System.out.println("Tanggal Masuk       : "+tglMasuk);
+                System.out.println("Tanggal Keluar      : "+tglKeluar);
             }
             else{
                 ulang=true;
@@ -63,19 +112,6 @@ public class chochoJOption{
             break;
         }
         }while(pilihan<1 || pilihan>4 || ulang);
-        
-        LocalDate tglMasuk = LocalDate.now();
-        LocalDate tglKeluar = tglMasuk.plusMonths(lamaSewa);
-        
-        total = harga * lamaSewa;
-        dp = 0.5 * total;
-        sisa = total-dp;
-        
-        JOptionPane.showMessageDialog(null,"=============================\n"+"        Bukti Penyewaan      \n"+"=============================\n"+tipeKamar+"\nHarga : Rp "+harga+"/Bulan"+"\nNama                : "+nama+"\nAlamat              : "+alamat+"\nLama Sewa           : "+lamaSewa+"(bulan)"+"\nJumlah Pembayaran   : "+"Rp "+total+"\nDP Pembayaran       : "+"Rp "+dp+"\nSisa Pembayaran     : "+"Rp "+sisa+"\nTanggal Masuk       : "+tglMasuk+"\nTanggal Keluar      : "+tglKeluar);
-            
-            
-            
-   
         
         }
     }
